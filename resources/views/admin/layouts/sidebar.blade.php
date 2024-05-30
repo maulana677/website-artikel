@@ -9,7 +9,7 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <img alt="image" src="{{ asset(auth()->user()->avatar) }}" class="rounded-circle mr-1">
+                <img alt="image" src="#" class="rounded-circle mr-1">
                 <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -38,15 +38,15 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Creatifolio</a>
+            <a href="index.html">Web Artikel</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">CF</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="{{ setSidebarActive(['dashboard']) }}"><a class="nav-link"
-                    href="{{ route('admin.dashboard') }}"><i class="fas fa-fire"></i>General
+            <li class="{{ setSidebarActive(['dashboard']) }}"><a class="nav-link" href="{{ route('dashboard') }}"><i
+                        class="fas fa-fire"></i>General
                     Dashboard</a>
             </li>
 
@@ -67,8 +67,8 @@
                 </ul>
             </li>
 
-            <li class="{{ setSidebarActive(['admin.about.*']) }}">
-                <a class="nav-link" href="#"><i class="fas fa-address-card"></i>
+            <li class="{{ setSidebarActive(['admin.artikel.*']) }}">
+                <a class="nav-link" href="{{ route('admin.artikel.index') }}"><i class="fas fa-address-card"></i>
                     <span>Artikel</span>
                 </a>
             </li>
